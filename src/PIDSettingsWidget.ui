@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PIDSettingsWidget</class>
+ <widget class="QWidget" name="PIDSettingsWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>255</width>
+    <height>272</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" colspan="4">
+    <widget class="QPushButton" name="apply">
+     <property name="text">
+      <string>Apply</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="labelTs">
+     <property name="toolTip">
+      <string>Sampling time (in seconds)</string>
+     </property>
+     <property name="text">
+      <string>Ts</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="editTs">
+     <property name="toolTip">
+      <string>Sampling time (in seconds)</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QLabel" name="labelB">
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Setpoint weighing term, generally between 0 and 1. 1 is the usual PID behaviour while 0 means that the setpoint is only introduced through the integral term.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>B</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3">
+    <widget class="QLineEdit" name="editB">
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Setpoint weighing term, generally between 0 and 1. 1 is the usual PID behaviour while 0 means that the setpoint is only introduced through the integral term.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="labelK">
+     <property name="toolTip">
+      <string>Proportional Gain</string>
+     </property>
+     <property name="text">
+      <string>K</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLineEdit" name="editK">
+     <property name="toolTip">
+      <string>Proportional Gain</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2">
+    <widget class="QLabel" name="labelTt">
+     <property name="toolTip">
+      <string>Integrator anti-windup time constant. Leave to zero to use the ideal time constant of sqrt(Td*Ti). Negative values disable, and positive values are used as-is</string>
+     </property>
+     <property name="text">
+      <string>Tt</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="3">
+    <widget class="QLineEdit" name="editTt">
+     <property name="toolTip">
+      <string>Integrator anti-windup time constant. Leave to zero to use the ideal time constant of sqrt(Td*Ti). Negative values disable, and positive values are used as-is</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="labelTi">
+     <property name="toolTip">
+      <string>Integral time constant (in seconds)</string>
+     </property>
+     <property name="text">
+      <string>Ti</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLineEdit" name="editTi">
+     <property name="toolTip">
+      <string>Integral time constant (in seconds)</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2">
+    <widget class="QLabel" name="labelMax">
+     <property name="toolTip">
+      <string>Maximum output value</string>
+     </property>
+     <property name="text">
+      <string>Max</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="3">
+    <widget class="QLineEdit" name="editMax">
+     <property name="toolTip">
+      <string>Maximum output value</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="labelTd">
+     <property name="toolTip">
+      <string>Derivative time constant (in seconds)</string>
+     </property>
+     <property name="text">
+      <string>Td</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QLineEdit" name="editTd">
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="2">
+    <widget class="QLabel" name="labelMin">
+     <property name="toolTip">
+      <string>Minimum output value</string>
+     </property>
+     <property name="text">
+      <string>Min</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="3">
+    <widget class="QLineEdit" name="editMin">
+     <property name="toolTip">
+      <string>Minimum output value</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="labelN">
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Derivative Term. The derivative is filtered by a first-order system with time constant Td/N. Typical values are between 8 and 20. There is no derivative action on frequencies above N/Td.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>N</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QLineEdit" name="editN">
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Derivative Term. The derivative is filtered by a first-order system with time constant Td/N. Typical values are between 8 and 20. There is no derivative action on frequencies above N/Td.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>10</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,17 +1,9 @@
 <package>
-  <description brief="">
-  
+  <description brief="Generic widgets to build controller-tuning GUIs">
   </description>
-  <author>/</author>
-  <license></license>
-  <url>http://</url>
-  <logo>http://</logo>
+  <maintainer>Sylvain Joyeux/sylvain.joyeux@m4x.org</maintainer>
+  <license>LGPLv3 or later</license>
   <depend package="base/cmake" />
-  <!--
-   To add any dependencies use the depend tag
-  <depend package="dummy-dependency-0" />
-	...
-  <depend package="dummy-dependency-n-1" />
-  <depend package="dummy-dependency-n" />
-  -->
+  <depend package="qt4" />
+  <depend package="control/motor_controller" />
 </package>

@@ -1,7 +1,8 @@
-rock_library(controller_tuning_widgets
-    SOURCES Dummy.cpp
-    HEADERS Dummy.hpp)
-
-rock_executable(controller_tuning_widgets_bin Main.cpp
-    DEPS controller_tuning_widgets)
+rock_find_qt4()
+rock_vizkit_widget(pid_settings_widget
+    HEADERS PIDSettingsWidget.hpp PIDSettingsWidgetPlugin.hpp
+    SOURCES PIDSettingsWidget.cpp PIDSettingsWidgetPlugin.cpp
+    DEPS_PKGCONFIG motor_controller
+    MOC PIDSettingsWidget.hpp PIDSettingsWidgetPlugin.hpp
+    UI PIDSettingsWidget.ui)
 
