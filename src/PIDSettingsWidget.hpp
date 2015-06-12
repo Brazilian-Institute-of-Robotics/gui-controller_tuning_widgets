@@ -19,9 +19,9 @@ namespace controller_tuning_widgets {
         PIDSettingsWidget(QWidget* parent = NULL);
         ~PIDSettingsWidget();
 
-        void set(PIDSettings const& settings);
-
     public slots:
+        void set(motor_controller::PIDSettings const& settings);
+
         // Note: it is important to keep the motor_controller:: here as
         // otherwise it does not end up in the Qt metadata and it breaks dynamic
         // slot calls
